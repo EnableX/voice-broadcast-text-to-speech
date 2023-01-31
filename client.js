@@ -106,10 +106,10 @@ app.use(express.static('client'));
 // outbound voice call
 let body = {
   from : `${process.env.FROM}`,
-  to : `${process.env.TO}`,
-  play_text: 'Hi Please Get Vaccinated with the booster dose ',
-  play_voice : 'Female',
-  play_language : 'en-US',
+  to : `${process.env.BROADCAST_NUMBERS}`,
+  play_text: `${process.env.TEXT}`,
+  play_voice : `${process.env.VOICE}`,
+  play_language : `${process.env.LANGUAGE}`,
   prompt_ref : 'broadcast_initial_prompt'
 }
 
@@ -186,7 +186,7 @@ function voiceEventHandler(voiceEvent) {
       const eventMsg = 'prompt play is completed';
       logger.info(`[${call.voice_id}] ${eventMsg}`);
       sseMsg.push(eventMsg);
-      hangupCall(voiceEvent.broadcast_id, voiceEvent.voice_id, () => {});	    
+      hangupCall(voiceEvent.broadcast_id, voiceEvent.voice_id, () => {});
     }
   }
 }
