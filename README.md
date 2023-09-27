@@ -1,5 +1,5 @@
-# **Basic Client Examples to demonstrate Broadcast Calls using Enablex Voice APIs. **
-This example contains instructions how users can initiate Broadcast Calls.
+# **Basic Client Examples to demonstrate Broadcast Calls with text to speech prompt using Enablex Voice APIs. **
+This example contains instructions how users can initiate Broadcast Calls and play the provided text as prompt.
 
 
 ## Pre-requisite
